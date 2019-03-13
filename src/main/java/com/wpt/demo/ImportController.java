@@ -2,7 +2,6 @@ package com.wpt.demo;
 
 import java.io.IOException;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -10,71 +9,55 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-@Controller
 /**
- * 
+ * æ–‡ä»¶å¯¼å…¥å¯¼å‡º
  * @author WangPengTao
  *
  */
+@RequestMapping("/import")
+@Controller
 public class ImportController {
 
-	// private static final Logger LOGGER =
-	// Logger.getLogger(ImportController.class);
+ 
 
-	@RequestMapping(value="/demo.do",method=RequestMethod.GET)
+	@RequestMapping(value="/demo",method=RequestMethod.GET)
 	public String strName() {
-		System.out.println("²âÊÔ³É¹¦£¡£¡£¡");
+		System.out.println("æµ‹è¯•æˆåŠŸï¼ï¼ï¼");
 		return "importFile";
 	}
 
-	/*@ResponseBody
-	@RequestMapping(value = "/register.do",method=RequestMethod.POST)
-	public String excelFileImport() {
-		try {
-			// µÃµ½ÉÏ´«µÄÎÄ¼ş
-
-			 
-
-			return "OK!!!";
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return null;
-
-	}*/
 	 
 	/**
-	 * ºóÌ¨ÏòÇ°Ì¨´«²ÎµÄµÚÒ»ÖÖ·½·¨£ºModel
+	 * åå°å‘å‰å°ä¼ å‚çš„ç¬¬ä¸€ç§æ–¹æ³•ï¼šModel
 	 * @param model
 	 * @return
 	 */
-	/*@RequestMapping("")
+	/* @RequestMapping("testDemo")
 	public String   demoModel(Model model) {
 		System.out.println(this.getClass());
-		model.addAttribute("userName","ÍõÅóÌÎ");
+		model.addAttribute("userName","ç‹æœ‹æ¶›");
 		User u=new User("Will",26,"you are KU!!!");
 		model.addAttribute(u);
-		*//**
-		 * ·µ»ØÌø×ªµÄÒ³Ãæ
-		 *//*
-		return "";
-	}*/
+		 *//**
+		 * è¿”å›è·³è½¬çš„é¡µé¢
+		 *//* 
+		return "test";
+	} */
 	/**
-	 * µÚ¶şÖÖ´«²Î
+	 * ç¬¬äºŒç§ä¼ å‚
 	 * @return
 	 */
-	/*@RequestMapping("")
+	/* @RequestMapping("testDemo")
 	public ModelAndView  modelAndView() {
 		ModelAndView mv=new ModelAndView();
 		mv.addObject("userName","Will");
-		*//**
-		 * Ìø×ªÒ³ÃæÄãÂ·¾¶
-		 *//*
-		mv.setViewName("");	
+		 *//**
+		 * è·³è½¬é¡µé¢ä½ è·¯å¾„
+		 *//* 
+		mv.setViewName("/web/test.jsp");	
 		return mv;
-	}*/
+	} */
 	/**
 	 * 
 	 * @param request
@@ -82,21 +65,21 @@ public class ImportController {
 	 * @throws Exception
 	 * @throws IOException
 	 */
-	/*@RequestMapping("")
-	public void httpP(HttpServletRequest request,HttpServletResponse response) throws Exception, IOException {
+	/* @RequestMapping("testDemo")
+	public void httpP(HttpServletRequest request,HttpServletResponse response) {
 		try {
 			
 			request.setAttribute("userName","Will");
-			*//**
-			 * ÖØ¶¨Ïò
-			 *//*
-			request.getRequestDispatcher("").forward(request, response);
+			 *//**
+			 * é‡å®šå‘
+			 *//* 
+			request.getRequestDispatcher("/web/test.jsp").forward(request, response);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 		
-	}*/
-	 
+	} 
+	 */
 	
 
 	 
