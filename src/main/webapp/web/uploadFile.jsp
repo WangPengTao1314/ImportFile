@@ -4,19 +4,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>供应商信息导入</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<div>
-		<form action="/importFile.do" method="POST"
-			enctype="multipart/form-data">
-			<div class="form-group">
-				<label for="file">上传文件</label> <input type="file" id="file"
-					name="file">
-			</div>
+	<form action="/uploadFile.do"  
+	      enctype="multipart/form-data" 
+	      method="post" >
+		姓名：        <input name="name" type="text"><br /> 
+		上传附件：<input name="uploadFile" type="file"><br /> 
+		       <input type="button" value="提交">
 
-		</form>
-	</div>
+	</form>
 
 </body>
 </html>
